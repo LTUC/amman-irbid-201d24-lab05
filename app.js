@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
@@ -10,6 +10,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   //eslint-disable-line
+  let Sum = a + b;
+  return [Sum, `The sum of ${a} and ${b} is ${Sum}.`];
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -27,10 +29,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
+  let result = a * b;
+
+  return [result, `The product of ${a} and ${b} is ${result}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -48,10 +53,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+  let Sum = sum(a, sum(b, c)[0])[0];
+  let Result = multiply(a, multiply(b, c)[0])[0];
+
+  return [
+    Sum,
+    Result,
+    `${a} and ${b} and ${c} sum to ${Sum}.`,
+    `The product of ${a} and ${b} and ${c} is ${Result}.`,
+  ];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,11 +84,18 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
+
+  let Sum = sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
+
+  return [
+    Sum,
+    `${sumArr} was passed in as an array of numbers, and ${Sum} is their sum.`,
+  ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,10 +112,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+  let Result = multiply(multArr[0], multiply(multArr[1], multArr[2])[0])[0];
+  return [Result, `The numbers ${multArr} have a product of ${Result}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -105,6 +128,7 @@ function multiplyArray(multArr) {
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
 Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -119,9 +143,22 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+  let Sum = 1;
+  if (dynamicArray.length % 2 == 0) {
+    for (let i = 0; i < dynamicArray.length; i = i + 2) {
+      Sum = multiply(Sum, multiply(dynamicArray[i], dynamicArray[i + 1])[0])[0];
+    }
+    console.log(Sum);
+  } else {
+    for (let i = 0; i < dynamicArray.length - 1; i = i + 2) {
+      Sum = multiply(Sum, multiply(dynamicArray[i], dynamicArray[i + 1])[0])[0];
+    }
+    Sum = multiply(Sum, dynamicArray[dynamicArray.length - 1])[0];
+  }
+  return [Sum, `The numbers ${dynamicArray} have a product of ${Sum}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
