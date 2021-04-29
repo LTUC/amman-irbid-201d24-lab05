@@ -146,12 +146,12 @@ function multiplyAnyArray(dynamicArray) {
   let Sum = 1;
   if (dynamicArray.length % 2 == 0) {
     for (let i = 0; i < dynamicArray.length; i = i + 2) {
-      Sum *= multiply(dynamicArray[i], dynamicArray[i + 1])[0];
+      Sum = multiply(Sum, multiply(dynamicArray[i], dynamicArray[i + 1])[0])[0];
     }
     console.log(Sum);
   } else {
     for (let i = 0; i < dynamicArray.length - 1; i = i + 2) {
-      Sum *= multiply(dynamicArray[i], dynamicArray[i + 1])[0];
+      Sum = multiply(Sum, multiply(dynamicArray[i], dynamicArray[i + 1])[0])[0];
     }
     Sum = multiply(Sum, dynamicArray[dynamicArray.length - 1])[0];
   }
