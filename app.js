@@ -11,11 +11,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
   //eslint-disable-line
   let sum = a+b;
-<<<<<<< HEAD
+
   return [sum,'The sum of 4 and 7 is 11.'];
-=======
-  return [sum, `The sum of ${a} and ${b} is ${sum}.`]
->>>>>>> fdfc557842573548fdd46cd1bbcf47e46841fbf6
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -33,10 +30,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
+  let multi = a * b ;
+  return[multi,`The product of ${a} and ${b} is ${multi}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
