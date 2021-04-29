@@ -25,9 +25,18 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
+function multiply(a, b) { 
+  //eslint-disable-line
+
+  let result1=sum(a,b)[0]
+let result2=sum(c,result1)[0]
+
+let output=multiply(a,b)[0]
+let output2=multiply(c,output)[0]
+return[result2,output2,`${a} and ${b} and ${c} sum to ${result2}.`,`The product of ${a} and ${b} and ${c} is ${output2}.`];
 let multi =a*b;
 return[multi,`The product of ${a} and ${b} is ${multi}.`];
+
 
 }
 
