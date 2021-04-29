@@ -10,8 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   let sum =a+b;
-  return[sum, `The sum of ${a} and ${b} is ${sum}.`];
-}
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
