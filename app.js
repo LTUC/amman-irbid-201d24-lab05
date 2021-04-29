@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
@@ -10,6 +10,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   //eslint-disable-line
+  let Sum = a + b;
+  return [Sum, `The sum of ${a} and ${b} is ${Sum}.`];
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
