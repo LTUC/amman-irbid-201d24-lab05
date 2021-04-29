@@ -10,8 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   let sum =a+b;
-  return[sum, "The sum of 4 and 7 is 11."];
-}
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -27,11 +26,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  //eslint-disable-line
+let multi =a*b;
+return[multi,`The product of ${a} and ${b} is ${multi}.`];
+
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
