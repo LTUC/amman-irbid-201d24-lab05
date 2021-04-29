@@ -60,7 +60,7 @@ function sumAndMultiply(a, b, c) {
 // console.log(totalmulti);
   return[totalsum,totalmulti,`${a} and ${b} and ${c} sum to ${totalsum}.`,`The product of ${a} and ${b} and ${c} is ${totalmulti}.`]
 
-  //eslint-disable-line
+  // eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
