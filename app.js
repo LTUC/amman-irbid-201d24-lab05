@@ -111,7 +111,7 @@ function multiplyArray(multArr) {
   return [ma , `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${ma}.`];}
 
 // Here is the test for multiplyArray(); uncomment it to run it
- testMultiplyArray(testArray);
+ //testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -121,7 +121,8 @@ function multiplyArray(multArr) {
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns
+ an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -136,9 +137,14 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
-}
+  let b = multiply(testDynamicArray[0], testDynamicArray[1])[0] ; 
+  for(let i=2 ; i < testDynamicArray.length ; i++){
+    let c = multiply( b , testDynamicArray[i])[0];
+    b = c ; 
+  }
+  return [b , `The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${b}.`];}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
