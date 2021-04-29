@@ -86,7 +86,6 @@ function sumArray([a,s,d]) { //eslint-disable-line
 }
 
 
-
 // Here is the test for sumArray(); uncomment it to run it
 
 
@@ -105,12 +104,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+function multiplyArray([q,w,e]) {
   //eslint-disable-line
+  let x= multiply(q,w)[0];
+  let y= multiply(x,e)[0];
+
+  return[y,`The numbers ${q},${w},${e} have a product of 24.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -133,9 +136,6 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
-}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
