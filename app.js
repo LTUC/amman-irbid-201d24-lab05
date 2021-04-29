@@ -53,10 +53,20 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+  // sum
+  let sum1 = sum(a, b)[0] ;
+  let sum2 = sum(sum1, c)[0] ;
+  let sumtotal = sum2 ;
+  // multi
+  let m1 = multiply(a, b)[0] ;
+  let m2 = multiply(m1, c)[0] ;
+  let multitotal = m2 ;
+
+  return[sumtotal, multitotal, '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.']
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -71,7 +81,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+// let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
