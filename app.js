@@ -29,13 +29,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
-  let multi=a * b;
+  let multi = a * b;
 
-  return [multi,`The product of ${a} and ${b} is ${multi}.`];
+  return [multi, `The product of ${a} and ${b} is ${multi}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,13 +53,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  let sumNumbers=a + b + c;
-  let mulNumbers=a * b * c;
-  return [sumNumbers,mulNumbers,`${a} and ${b} and ${c} sum to ${sumNumbers}.`,`The product of ${a} and ${b} and ${c} is ${mulNumbers}.`]
+  let sumNumbers = a + b + c;
+  let mulNumbers = a * b * c;
+  return [
+    sumNumbers,
+    mulNumbers,
+    `${a} and ${b} and ${c} sum to ${sumNumbers}.`,
+    `The product of ${a} and ${b} and ${c} is ${mulNumbers}.`,
+  ];
 }
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
-
+testSumAndMultiply(4, 7, 5);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -76,7 +80,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  //eslint-disable-line.
+  let result = 1;
+  for (let i = 0; i < testArray.length; i++) {
+    let result2 = result + sumArr[i];
+    result = result2;
+  }
+  return [
+    result,
+    `${sumArr[1]},${sumArr[2]},${sumArr[2]} was passed in as an array of numbers, and ${result} is their sum`,
+  ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -98,6 +111,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+ 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
