@@ -58,8 +58,8 @@ function sumAndMultiply(a, b, c) {
 
   let totalmulti =multiply(multiply(a,b)[0],c)[0];
 
- console.log(totalsum);
- console.log(totalmulti);
+//  console.log(totalsum);
+//  console.log(totalmulti);
 
  return[totalsum,totalmulti,`${a} and ${b} and ${c} sum to ${totalsum}.`,`The product of ${a} and ${b} and ${c} is ${totalmulti}.`]
  
@@ -85,11 +85,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+// let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
+// function sumArray(sumArr) {
+
+
+//   let sumArr = sum((a,b)[0],c)[0];
+
+//   return[arraySum,` ${a},${b},${c} was passed in as an array of numbers, and ${arraySum} is their sum.` ]
+
+
   //eslint-disable-line
-}
+////////////
 
 // Here is the test for sumArray(); uncomment it to run it
 
