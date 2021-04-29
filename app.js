@@ -108,8 +108,7 @@ function multiplyArray(multArr) {
   //eslint-disable-line
   let ma = multiply( multiply(testArray[0] , testArray[1])[0], testArray[2])[0];
   
-  return [ma , `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${ma}.`];
-}
+  return [ma , `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${ma}.`];}
 
 // Here is the test for multiplyArray(); uncomment it to run it
  testMultiplyArray(testArray);
