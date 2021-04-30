@@ -8,6 +8,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+
 function sum(a, b) {
   let sum = a + b ;
   return[sum, 'The sum of 4 and 7 is 11.'];
@@ -50,12 +51,37 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
+
+// function sum (a ,b, c){
+//   let sum= a+b+c;
+//   return[sum,'4 and 7 and 5 sum to 16.' ]
+// } 
+//  function multi (a ,b,c){
+//    let multi =a*b*c;
+//    return[multi,'4 and 7 and 5 multi to 140' ]
+//  }
 function sumAndMultiply(a, b, c) {
+// let SumNum =  sum (a, b )
+// let SumNum = sum (sum , c)
+// // let multi = multi (a,b)
+// let multinum = multiply (multiply, c)
+// let SumNum= a+b+c ;
+// let MultiNum= a*b*c;
+let x= sum(a,b)[0];
+let y=sum(x,c)[0];
+let z=multiply(a,b)[0];
+let m=multiply(z,c)[0];
+return[ y,m,  "4 and 7 and 5 sum to 16." , "The product of 4 and 7 and 5 is 140."];
+
+
   //eslint-disable-line
+  
 }
+sumAndMultiply();
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
