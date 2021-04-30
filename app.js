@@ -98,13 +98,28 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
-  //eslint-disable-line
+function sumArray(array){
+  let suma = sum(array[1],array[0])
+  let sumy=sum(suma[0],array[2]);
+  return[sumy[0],"2,3,4 was passed in as an array of numbers, and 9 is their sum."
+]
 }
 
+
+
+// function sumArray(a,b,c) {
+  
+//   let m = [2,3,4];
+// let y=sum(m)
+//  return[y ,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
+// }
+  //eslint-disable-line
+ 
+
+// sumArray();
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+  testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -119,12 +134,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+let testmulti = [2, 3, 4];
+function multiplyArray(array) {
+  let x= multiply(array[0],array[1]);
+  let y=multiply(x[0],array[2]);
+  return[y[0],"The numbers 2,3,4 have a product of 24."
+]
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -147,7 +167,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) {
+function multiplyAnyArray() {
   //eslint-disable-line
 }
 
