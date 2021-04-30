@@ -134,12 +134,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
 let testmulti = [2, 3, 4];
 function multiplyArray(array) {
   let x= multiply(array[0],array[1]);
   let y=multiply(x[0],array[2]);
   return[y[0],"The numbers 2,3,4 have a product of 24."
 ]
+function multiplyArray() {
+
   //eslint-disable-line
 }
 
