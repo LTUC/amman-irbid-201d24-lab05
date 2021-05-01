@@ -103,6 +103,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+<<<<<<< HEAD
+let m = 1;
+function multiplyArray(multArr) 
+{
+    for (let i = 0; i < multArr.length; i++)
+       {
+          let x = multArr[i];
+=======
 
 let m=1;
 function multiplyArray(multArr)
@@ -110,10 +118,13 @@ function multiplyArray(multArr)
   for (let i=0;i<multArr.length;i++)
   {
     let x = multArr[i];
+>>>>>>> 83e509172ffa5a3acfc4d1491f00f1cfd7948596
     m = multiply(m, x)[0];
   }
-    return [m, "The numbers 2,3,4 have a product of 24."];
-  }
+    return [m,"The numbers 2,3,4 have a product of 24."];
+
+    // eslint-disable-line
+}
   //eslint-disable-line
 
 
@@ -159,11 +170,12 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+// let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) {
+// function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
-}
+  
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
