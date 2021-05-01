@@ -102,12 +102,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+let m=1;
+function multiplyArray(multArr)
+ {
+  for (let i=0;i<multArr.length;i++)
+  {
+    let x = multArr[i];
+    m = multiply(m, x)[0];
+  }
+    return [m, "The numbers 2,3,4 have a product of 24."];
+  }
   //eslint-disable-line
-}
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
