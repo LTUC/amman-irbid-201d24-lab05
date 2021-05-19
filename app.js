@@ -29,20 +29,27 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { 
   //eslint-disable-line
 
-  let result1=sum(a,b)[0]
-let result2=sum(c,result1)[0]
+  let resulttt=a*b;
+  
 
-let output=multiply(a,b)[0]
-let output2=multiply(c,output)[0]
-return[result2,output2,`${a} and ${b} and ${c} sum to ${result2}.`,`The product of ${a} and ${b} and ${c} is ${output2}.`];
-let multi =a*b;
-return[multi,`The product of ${a} and ${b} is ${multi}.`];
+  return[resulttt,`The product of ${a} and ${b} is ${resulttt}.`] 
+
+
+//   let result1=sum(a,b)[0]
+// let result2=sum(c,result1)[0]
+
+// let output=multiply(a,b)[0]
+// let output2=multiply(c,output)[0]
+// return[result2,output2,`${a} and ${b} and ${c} sum to ${result2}.`,`The product of ${a} and ${b} and ${c} is ${output2}.`];
+// let multi =a*b;
+// return[multi,`The product of ${a} and ${b} is ${multi}.`];
 
 
 }
 
 
 // Here is the test for multiply(); uncomment it to run it
+debugger
  testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
